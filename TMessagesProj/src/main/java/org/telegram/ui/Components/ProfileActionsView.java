@@ -1005,7 +1005,7 @@ public class ProfileActionsView extends View {
         int iconTranslationY = 0;
         float iconScale = 1f;
 
-        Drawable rippleDrawable = Theme.AdaptiveRipple.createRect(0, Theme.multAlpha(Theme.getColor(Theme.key_windowBackgroundWhite), 0.45f), 8);
+        Drawable rippleDrawable = Theme.AdaptiveRipple.createRect(0, Theme.multAlpha(Theme.getColor(Theme.key_windowBackgroundWhite), 0.45f), 10);
         LoadingDrawable loadingDrawable;
         boolean isLoading;
         boolean supportsLoading;
