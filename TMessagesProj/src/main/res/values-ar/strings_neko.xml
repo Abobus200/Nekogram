@@ -307,7 +307,7 @@
     <string name="CloudflareCredentials">بيانات اعتماد Cloudflare</string>
     <string name="CloudflareCredentialsNotSet">لم يتم تكوين بيانات اعتماد Cloudflare.</string>
     <string name="CloudflareAccountID">معرّف الحساب</string>
-    <string name="CloudflareAPIToken">رمز API</string>
+    <string name="CloudflareAPIToken">رمز واجهة برمجة التطبيقات (API Token)</string>
     <string name="CloudflareCredentialsDialog">تكوين معرف حساب Cloudflare ورمز API.\n**كيفية الحصول عليه؟ **</string>
     <string name="PreferOriginalQuality">تفضيل الجودة الأصلية</string>
     <string name="PreferOriginalQualityDesc">عرض مقاطع الفيديو بالجودة الأصلية.</string>

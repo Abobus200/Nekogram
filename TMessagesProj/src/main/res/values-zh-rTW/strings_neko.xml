@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="NekoSettings">喵設定</string>
-    <string name="PreferIPv6">是否優先使用IPv6進行接駁</string>
+    <string name="PreferIPv6">優先透過 IPv6 連線</string>
     <string name="MessageMenu">訊息選單</string>
     <string name="HidePhone">隱藏您的手機號碼</string>
-    <string name="DeleteAllFromSelf">删除自己的消息</string>
+    <string name="DeleteAllFromSelf">刪除自己的訊息</string>
     <string name="DeleteAllFromSelfAlert">警告！ 這將為此對話中的**所有人**刪除**所有您發送的訊息**。</string>
     <string name="DeleteAllFromSelfAlertBefore">警告！ 這將為此對話中的 **所有人** 刪除 **全部您在%s前發出的訊息**。</string>
     <string name="DeleteAllFromSelfBefore">早於...</string>
@@ -45,13 +45,13 @@
     <string name="TranslateFailed">翻譯伺服器錯誤</string>
     <string name="TranslationProvider">翻譯源</string>
     <string name="ProviderGoogleTranslate">Google 翻譯</string>
-    <string name="TranslateApiUnsupported">您選擇的翻譯來源不支援您的語言.</string>
+    <string name="TranslateApiUnsupported">您選擇的翻譯來源不支援您的語言。</string>
     <string name="ProviderLingocloud">彩雲小譯</string>
     <string name="UndoTranslate">撤銷翻譯</string>
     <string name="OpenArchiveOnPull">下拉開啟已封存對話</string>
     <string name="HideKeyboardOnChatScroll">當滾動瀏覽對話時隱藏鍵盤</string>
     <string name="CheckAllAdministrated">新增管理員</string>
-    <string name="RearVideoMessages">視頻消息中使用後置攝像頭</string>
+    <string name="RearVideoMessages">影片訊息中使用後置鏡頭</string>
     <string name="HideAllTab">隱藏“所有聊天”標籤</string>
     <string name="TabTitleType">在標籤欄上顯示</string>
     <string name="TabTitleTypeTip">圖示由 Telegram 雲同步。</string>
@@ -88,7 +88,7 @@
     <string name="VoiceEnhancements">語音增強功能</string>
     <string name="VoiceEnhancementsAbout">雜訊抑制和語音歸一化</string>
     <string name="DisableInstantCamera">禁用即時相機</string>
-    <string name="OpenAllLinksInInstantView">嘗試在即時瀏覽中打開所有鏈接</string>
+    <string name="OpenAllLinksInInstantView">嘗試在即時瀏覽中打開所有連結</string>
     <string name="DonateThankYou">謝謝！</string>
     <string name="DonateEvilGoogle">Google 將收取您捐款的 30%。</string>
     <string name="formatterDay24HSec">HH:mm:ss</string>
@@ -118,16 +118,14 @@
     <string name="RegistrationDateNewer">晚於 %s</string>
     <string name="RegistrationDateOlder">早於 %s</string>
     <string name="RegistrationDateApproximately">大約 %s</string>
-    <string name="WsEnableTls">啟用 TLS</string>
-    <string name="WsProvider">供應商</string>
     <string name="UpdateNekogram">更新 Nekogram</string>
     <string name="TranslationTarget">目標語言</string>
     <string name="TranslationTargetApp">跟隨應用</string>
     <string name="Translator">翻譯</string>
-    <string name="ResetLanguage">重置語言</string>
+    <string name="ResetLanguage">重設語言</string>
     <string name="UseGoogleTranslate">使用谷歌</string>
     <string name="DeepLFormality">形式</string>
-    <string name="DeepLFormalityDefault">默認</string>
+    <string name="DeepLFormalityDefault">預設</string>
     <string name="DeepLFormalityMore">更書面</string>
     <string name="DeepLFormalityLess">更口語</string>
     <string name="InvalidCustomEmojiTypeface">無效字體文件</string>
@@ -158,8 +156,9 @@
     <string name="QRLoginTitle">使用 QRCode 登入</string>
     <string name="NoTranslatorAppInstalled">你沒有任何可以處理翻譯的應用程式, 請安裝一個來繼續</string>
     <string name="DisableVoiceMessagesAutoPlay">停止自動播放語音訊息</string>
+    <string name="UnmuteVideosWithVolumeButtons">使用音量按鈕解除影片靜音</string>
     <string name="TranslatorType">類型</string>
-    <string name="TranslatorTypeNeko">消息下</string>
+    <string name="TranslatorTypeNeko">訊息下</string>
     <string name="TranslatorTypeTG">對話框</string>
     <string name="TranslatorTypeExternal">使用外部程序翻譯</string>
     <string name="CopyPhoto">複製照片</string>
@@ -266,9 +265,11 @@
     <string name="SendLargePhotos">傳送大照片</string>
     <string name="SendLargePhotosAbout">將壓縮影像的邊距限制增加到 2560 像素。</string>
     <string name="ExportAsJson">複製為 JSON</string>
+    <string name="ViewAsJson"></string>
     <string name="HideStories">隱藏動態</string>
     <string name="QuickForward">使用快速轉發選單</string>
     <string name="DidNotGetTheCodeBlameDurov">如果您沒有在其他裝置上取得驗證碼，或者您沒有在其他裝置上登入 Telegram，請使用官方 Telegram 應用程式接收驗證碼。\n\nTelegram 已**停用透過簡訊登入的功能** 在第三方應用程序上。 登入第三方應用程式的使用者只能透過 Telegram 接收登入代碼。\n\n我們無法協助您解決此問題，如果您在登入時遇到任何問題，請聯絡 Telegram 支援。</string>
+    <string name="ChangePhoneNumberBlameDurov">Telegram **已禁止在第三方應用更改電話號碼**。用戶只能透過 Telegram 更改電話號碼。</string>
     <string name="NavigationAnimation">導航動畫</string>
     <string name="NavigationAnimationBezier">經典</string>
     <string name="NavigationAnimationSpring">自然</string>
@@ -298,6 +299,21 @@
     <string name="ShowTimeHint">顯示時間提示</string>
     <string name="ShowTimeHintDesc">點擊時間顯示詳細的發送日期。</string>
     <string name="Cryptocurrency">加密貨幣</string>
+    <string name="TranscribeProviderShort">提供者</string>
+    <string name="TranscribeProviderAuto">自動選擇</string>
+    <string name="TranscribeProviderWorkersAI">Whisper (Workers AI)</string>
+    <string name="TranscribeProviderDesc">在 Telegram Premium 不可用時，將使用 %s 作為自動選擇選項。</string>
+    <string name="CloudflareCredentials">Cloudflare 憑證</string>
+    <string name="CloudflareCredentialsNotSet">未設定 Cloudflate 憑證。</string>
+    <string name="CloudflareAccountID">帳戶 ID</string>
+    <string name="CloudflareAPIToken">API 權杖</string>
+    <string name="CloudflareCredentialsDialog">設定 Cloudflare 帳戶 ID 和 API 權杖。\n**如何取得？**</string>
+    <string name="PreferOriginalQuality">偏好原始畫質</string>
+    <string name="PreferOriginalQualityDesc">以原始畫質觀看影片。</string>
+    <string name="AutoInlineBot">自動 Inline 機器人</string>
+    <string name="AutoInlineBotDesc">根據訊息文字自動查詢 Inline 機器人。</string>
+    <string name="ShortStandardQuality">SD</string>
+    <string name="ForceFontWeightFallback">強制使用字重替代</string>
     <!-- Accessibility -->
-    <string name="AccessibilitySettings">可訪問性設置</string>
+    <string name="AccessibilitySettings">無障礙設定</string>
 </resources>

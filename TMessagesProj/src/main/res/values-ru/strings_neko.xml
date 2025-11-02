@@ -293,13 +293,13 @@
     <string name="IgnoreContentRestriction">Игнорировать ограничение контента</string>
     <string name="PreviewSendPhoto">Отправить фото</string>
     <string name="PreviewSendVideo">Отправить видео</string>
-    <string name="PreviewSendFile">Отправить видео</string>
-    <string name="FixLinkPreview">Исправить предпросмотр ссылки</string>
+    <string name="PreviewSendFile">Отправить файл</string>
+    <string name="FixLinkPreview">Исправление предпросмотра ссылок</string>
     <string name="FixLinkPreviewDesc">Отправить ссылки из других социальных сетей с исправленным предпросмотром ссылки.</string>
     <string name="ShowTimeHint">Показать подсказку по времени</string>
-    <string name="ShowTimeHintDesc">Показать детальную дату отправки нажатием на время.</string>
+    <string name="ShowTimeHintDesc">Отображение подробностей при нажатии на время отправки сообщения.</string>
     <string name="Cryptocurrency">Криптовалюта</string>
-    <string name="TranscribeProviderShort">Провайдер</string>
+    <string name="TranscribeProviderShort">Сервис распознавания</string>
     <string name="TranscribeProviderAuto">Автоматический выбор</string>
     <string name="TranscribeProviderWorkersAI">Whisper (Workers AI)</string>
     <string name="TranscribeProviderDesc">При опции автоматического выбора %s будет использоваться когда Telegram Premium недоступен.</string>
