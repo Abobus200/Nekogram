@@ -936,9 +936,9 @@ public class ActionBarLayout extends FrameLayout implements INavigationLayout, F
         int clipLeft = getPaddingLeft();
         int clipRight = width + getPaddingLeft();
 
-        if (child == containerViewBack) {
+        if (child == getBackgroundView()) {
             clipRight = translationX + dp(1);
-        } else if (child == containerView) {
+        } else if (child == getForegroundView()) {
             clipLeft = translationX;
         }
 
@@ -948,7 +948,7 @@ public class ActionBarLayout extends FrameLayout implements INavigationLayout, F
             withShadow = false;
         }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S && !isSheet && (translationX != 0 || overrideWidthOffset != -1)) {
-            if (child == containerView) {
+            if (child == getForegroundView()) {
                 final WindowInsets insets = getRootWindowInsets();
                 if (insets != null) {
                     final RoundedCorner topLeft = insets.getRoundedCorner(android.view.RoundedCorner.POSITION_TOP_LEFT);
@@ -965,7 +965,7 @@ public class ActionBarLayout extends FrameLayout implements INavigationLayout, F
                     clipPath.addRoundRect(AndroidUtilities.rectTmp, radii, Path.Direction.CW);
                     canvas.clipPath(clipPath);
                 }
-            } else if (child == containerViewBack) {
+            } else if (child == getBackgroundView()) {
                 final WindowInsets insets = getRootWindowInsets();
                 if (insets != null) {
                     final RoundedCorner topLeft = insets.getRoundedCorner(android.view.RoundedCorner.POSITION_TOP_LEFT);
@@ -1039,7 +1039,7 @@ public class ActionBarLayout extends FrameLayout implements INavigationLayout, F
 
         if (translationX != 0 || overrideWidthOffset != -1) {
             int widthOffset = overrideWidthOffset != -1 ? overrideWidthOffset : width - translationX;
-            if (child == containerView) {
+            if (child == getForegroundView()) {
                 final int alpha = USE_SPRING_ANIMATION ? MathUtils.clamp(255 * widthOffset / width, 0, 255) : MathUtils.clamp(255 * widthOffset / dp(20), 0, 255);
                 if (alpha > 0) {
                     final int tabsHeight = getBottomTabsHeight(false);
@@ -1061,7 +1061,7 @@ public class ActionBarLayout extends FrameLayout implements INavigationLayout, F
                         layerShadowDrawable.draw(canvas);
                     }
                 }
-            } else if (child == containerViewBack) {
+            } else if (child == getBackgroundView()) {
                 float opacity = MathUtils.clamp(widthOffset / (float) width, 0, 0.8f);
                 scrimPaint.setColor(Color.argb((int) ((USE_SPRING_ANIMATION ? 0x7a : 0x99) * opacity), 0x00, 0x00, 0x00));
                 if (overrideWidthOffset != -1) {
@@ -1578,6 +1578,15 @@ public class ActionBarLayout extends FrameLayout implements INavigationLayout, F
     private static final float SPRING_STIFFNESS_PREVIEW_EXPAND = 750f;
     private static final float SPRING_MULTIPLIER = 1000f;
     private SpringAnimation currentSpringAnimation;
+    private boolean openingAnimation = true;
+
+    private LayoutContainer getForegroundView() {
+        return !transitionAnimationInProgress || openingAnimation ? containerView : containerViewBack;
+    }
+
+    private LayoutContainer getBackgroundView() {
+        return transitionAnimationInProgress && !openingAnimation ? containerView : containerViewBack;
+    }
 
     private void startLayoutAnimation(final boolean open, final boolean first, final boolean preview) {
         if (first) {
@@ -1585,6 +1594,7 @@ public class ActionBarLayout extends FrameLayout implements INavigationLayout, F
             lastFrameTime = System.nanoTime() / 1000000;
         }
         if (USE_SPRING_ANIMATION) {
+            openingAnimation = open;
             FloatValueHolder valueHolder = new FloatValueHolder(0);
             currentSpringAnimation = new SpringAnimation(valueHolder)
                     .setSpring(new SpringForce(SPRING_MULTIPLIER)
